@@ -1,5 +1,4 @@
-import HtmlWebpackPugPlugin from 'html-webpack-pug-plugin';
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -8,6 +7,11 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.pug"
+    }),
+  ],
   module: {
     rules: [
       {
@@ -19,13 +23,11 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
+      {
+        test: /\.pug$/,
+        use: ["pug-loader"]
+      },
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.pug'
-    }),
-    new HtmlWebpackPugPlugin()
-  ]
 };
