@@ -53,6 +53,12 @@ body {
       overflow: hidden;
       padding: 0;
     }
+
+    .headerBlock {
+      @media (max-width: $breakpoint-phone-portrait) {
+        padding: 0 2.5rem;
+      }
+    }
   }
 
   &.-blockSlider {
@@ -118,7 +124,7 @@ body {
     }
 
     @media (max-width: $breakpoint-phone-portrait) {
-      padding: 0 2.5rem;
+      padding: 0;
     }
   }
 }
@@ -142,7 +148,7 @@ body {
   max-width: 60rem;
   box-sizing: border-box;
   margin: 4rem auto 0;
-  
+
   @media (max-width: $breakpoint-phone-landscape) {
     margin: 0;
     flex-direction: column;
@@ -278,7 +284,7 @@ body {
   img {
     max-width: 100%;
   }
-  
+
   @media (max-width: $breakpoint-ipad-landscape) {
     flex: 1 0 100%;
     margin-bottom: 2rem;
@@ -537,6 +543,7 @@ body {
   @media (max-width: $breakpoint-phone-landscape) {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 2rem;
   }
 }
 
