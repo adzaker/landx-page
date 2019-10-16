@@ -3,7 +3,7 @@ import initMasks from "./js/controller/initMasks";
 import initInputsLabels from "./js/controller/initinputLabels";
 import initFluidPlayer from "./js/controller/initFluidPlayer";
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM fully loaded and parsed");
   initSwipers();
   initMasks();
