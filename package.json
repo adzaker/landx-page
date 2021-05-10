@@ -51,6 +51,6 @@
   },
   "dependencies": {
     "imports-loader": "^0.8.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
